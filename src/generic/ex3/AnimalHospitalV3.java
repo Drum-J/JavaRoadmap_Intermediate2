@@ -1,11 +1,12 @@
-package generic.test.ex3;
+package generic.ex3;
 
-import generic.animal.Dog;
+import generic.animal.Animal;
 
-public class DogHospital {
-    private Dog animal;
+public class AnimalHospitalV3<T extends Animal> {
 
-    public void set(Dog animal) {
+    private T animal;
+
+    public void set(T animal) {
         this.animal = animal;
     }
 
@@ -15,7 +16,7 @@ public class DogHospital {
         animal.sound();
     }
 
-    public Dog bigger(Dog target) {
+    public T bigger(T target) {
         return animal.getSize() > target.getSize() ? animal : target;
     }
 }

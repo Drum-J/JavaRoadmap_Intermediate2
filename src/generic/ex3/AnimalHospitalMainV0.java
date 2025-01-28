@@ -1,14 +1,12 @@
-package generic.test.ex3;
+package generic.ex3;
 
 import generic.animal.Cat;
 import generic.animal.Dog;
 
-public class AnimalHospitalMainV3 {
+public class AnimalHospitalMainV0 {
     public static void main(String[] args) {
-        AnimalHospitalV3<Dog> dogHospital = new AnimalHospitalV3<>();
-        AnimalHospitalV3<Cat> catHospital = new AnimalHospitalV3<>();
-        // Integer는 Animal의 자식이 아니다. 
-        // AnimalHospitalV3<Integer> integerHospital = new AnimalHospitalV3<Integer>();
+        DogHospital dogHospital = new DogHospital();
+        CatHospital catHospital = new CatHospital();
 
         Dog dog = new Dog("멍멍이1", 100);
         Cat cat = new Cat("냐옹이1", 300);
