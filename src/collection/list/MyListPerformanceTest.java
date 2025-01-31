@@ -1,6 +1,6 @@
 package collection.list;
 
-public class MyListPerfomanceTest {
+public class MyListPerformanceTest {
     public static void main(String[] args) {
         int size = 50_000;
         System.out.println("== MyArrayList 추가 ==");
