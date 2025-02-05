@@ -1,4 +1,4 @@
-package collection.set;
+package collection.set.myhashset;
 
 public interface MySet<E> {
 
