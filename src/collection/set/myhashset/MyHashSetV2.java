@@ -1,22 +1,22 @@
-package collection.set;
+package collection.set.myhashset;
 
 import java.util.Arrays;
 import java.util.LinkedList;
 
-public class MyHashSetV3<E> implements MySet<E> {
+public class MyHashSetV2 {
 
     static final int DEFAULT_INITIAL_CAPACITY = 16;
 
-    private LinkedList<E>[] buckets;
+    private LinkedList<Object>[] buckets;
 
     private int size = 0;
     private int capacity = DEFAULT_INITIAL_CAPACITY;
 
-    public MyHashSetV3() {
+    public MyHashSetV2() {
         initBuckets();
     }
 
-    public MyHashSetV3(int capacity) {
+    public MyHashSetV2(int capacity) {
         this.capacity = capacity;
         initBuckets();
     }
@@ -28,9 +28,9 @@ public class MyHashSetV3<E> implements MySet<E> {
         }
     }
 
-    public boolean add(E value) {
+    public boolean add(Object value) {
         int hashIndex = hashIndex(value);
-        LinkedList<E> bucket = buckets[hashIndex];
+        LinkedList<Object> bucket = buckets[hashIndex];
 
         if (bucket.contains(value)) {
             return false;
@@ -42,16 +42,16 @@ public class MyHashSetV3<E> implements MySet<E> {
         return true;
     }
 
-    public boolean contains(E searchValue) {
+    public boolean contains(Object searchValue) {
         int hashIndex = hashIndex(searchValue);
-        LinkedList<E> bucket = buckets[hashIndex];
+        LinkedList<Object> bucket = buckets[hashIndex];
 
         return bucket.contains(searchValue);
     }
 
-    public boolean remove(E value) {
+    public boolean remove(Object value) {
         int hashIndex = hashIndex(value);
-        LinkedList<E> bucket = buckets[hashIndex];
+        LinkedList<Object> bucket = buckets[hashIndex];
 
         boolean result = bucket.remove(value);
         if (result) {
@@ -60,7 +60,7 @@ public class MyHashSetV3<E> implements MySet<E> {
         } else return false;
     }
 
-    private int hashIndex(E value) {
+    private int hashIndex(Object value) {
         return Math.abs(value.hashCode()) % capacity;
     }
 
@@ -70,7 +70,7 @@ public class MyHashSetV3<E> implements MySet<E> {
 
     @Override
     public String toString() {
-        return "MyHashSetV3{" +
+        return "MyHashSetV2{" +
                 "buckets=" + Arrays.toString(buckets) +
                 ", size=" + size +
                 ", capacity=" + capacity +

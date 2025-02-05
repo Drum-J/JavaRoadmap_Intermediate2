@@ -1,6 +1,6 @@
 package collection.set.member;
 
-import collection.set.MyHashSetV2;
+import collection.set.myhashset.MyHashSetV2;
 
 public class HashAndEqualsMain2 {
     public static void main(String[] args) {

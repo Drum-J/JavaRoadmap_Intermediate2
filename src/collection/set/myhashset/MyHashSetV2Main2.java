@@ -1,4 +1,4 @@
-package collection.set;
+package collection.set.myhashset;
 
 import collection.set.member.Member;
 
