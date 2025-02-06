@@ -9,19 +9,6 @@ public class DequeMain {
         Deque<Integer> deque = new ArrayDeque<>();
         //Deque<Integer> deque = new LinkedList<>();
 
-        //offer로 넣으면 queue 처럼 들어간다.
-        /*
-        deque.offer(1);
-        deque.offer(2);
-        deque.offer(3);
-        */
-        //push 로 넣으면 stack 처럼 들어간다.
-        /*
-        deque.push(1);
-        deque.push(2);
-        deque.push(3);
-        */
-
         // 데이터 추가
         deque.offerFirst(1);
         System.out.println(deque);
@@ -36,7 +23,7 @@ public class DequeMain {
         System.out.println("deque.peekFirst() = " + deque.peekFirst());
         System.out.println("deque.peekLast() = " + deque.peekLast());
 
-        // 데이터 조회
+        // 데이터 꺼내기
         System.out.println("deque.pollFirst() = " + deque.pollFirst());
         System.out.println("deque.pollFirst() = " + deque.pollFirst());
         System.out.println("deque.pollLast() = " + deque.pollLast());
